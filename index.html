@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daan Abbink | Portfolio | Front-End</title>
+<meta name="description" content="Portfolio van Daan Abbink, student Software Developer bij het Alfa-college in Groningen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav aria-label="Hoofdmenu">
+      <a class="logo" href="#home">Daan Abbink</a>
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        
+        <li>
+          <a href="#vaardigheden">Vaardigheden</a>
+        </li>
+        
+        <li>
+          <a href="#soft-skills">Soft skills</a>
+        </li>
+        
+        <li>
+          <a href="#projecten">Projecten</a>
+        </li>
+        
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HOME -->
+<section id="home">
+  <div class="wrap">
+    <h1>Welkom op mijn Front-End portfoliowebsite</h1>
+    <p>Ik ben Daan Abbink. Ik ben een student Software Developer bij het Alfa-college in Groningen. Ik had gekozen voor front-end developer. Ik had vorig jaar graag games met mijn groepje gebouwd en websites en leer het liefst door zelf dingen te maken. Hieronder zie je wat ik kan en waar ik aan gewerkt heb.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projecten">Bekijk mijn projecten</a>
+      <a class="btn ghost" href="https://github.com/dabbink" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNISCHE VAARDIGHEDEN -->
+<section id="vaardigheden">
+  <div class="wrap">
+    <h2>Technische vaardigheden</h2>
+    <p class="lead">Wat ik kan en hoe goed ik het beheers. Het niveau staat rechts van elke balk.</p>
+    <div class="skills" id="skills"></div>
+  </div>
+</section>
+
+<!-- SOFT SKILLS -->
+<section id="soft-skills">
+  <div class="wrap">
+    <h2>Soft skills</h2>
+    <p class="lead">Mijn sterke punten als het gaat om samenwerken en werken aan een opdracht.</p>
+    <div class="soft">
+      <div>
+        <h3>Vriendelijk</h3>
+        <p>Ik ben heel toegankelijk en zorg voor een fijne en positieve sfeer in ons groepje.</p>
+      </div>
+      
+      <div>
+        <h3>Doorzettingsvermogen</h3>
+        <p>Ik geef niet te snel op bij de complexe problemen en blijf het proberen tot het werkt.</p>
+      </div>
+      
+      <div>
+        <h3>Oog voor detail</h3>
+        <p>Ik werk heel nauwkeurig en zorg ervoor dat alles strak en foutloos in elkaar zit.</p>
+      </div>
+      
+      <div>
+        <h3>Absoluut gehoor</h3>
+        <p>Ik heb een goed gehoor, wat ook heel handig is bij audio en multimedia.</p>
+      </div>
+      
+      <div>
+        <h3>Leergierigheid</h3>
+        <p>Ik leer de nieuwe tools snel en pas ze meteen toe in mijn eigen project.</p>
+      </div>
+      
+      <div>
+        <h3>Eerlijk</h3>
+        <p>Ik ben open en direct over de voortgang en durf het ook aan te geven als iets niet lukt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTEN -->
+<section id="projecten">
+  <div class="wrap">
+    <h2>Projecten</h2>
+    <p class="lead">Projecten waar ik trots op ben. Bij elk project staat wat ik zelf deed.</p>
+    <div class="projects">
+      <article class="project">
+        <div class="shot">
+          <img src="pixel-adventure-game.png" alt="Startscherm van de 2D game Pixel Adventure: Cloud Ascent">
+        </div>
+        <div class="body">
+          <h3>2D game in Godot</h3>
+          <p>Een 2D game die ik vorig jaar samen met mijn eigen groepje heb gemaakt in Godot.</p>
+          <p class="role"><strong>Mijn rol:</strong> Ik was de tester van onze 2D Game. Ik testte de game op fouten die in de game konden zitten en liet het team ook weten wat er allemaal nog beter kon.</p>
+          
+          <ul class="tags">
+            <li>Godot</li>
+            <li>2D game</li>
+            <li>Testen</li>
+            <li>Teamwork</li>
+          </ul>
+        
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap contact">
+    <div>
+      <h2>Contact</h2>
+      <p class="lead">Wil je meer weten over de 2D game of misschien samenwerken met onze 2D game? Stuur me een bericht. Dan laat ik het weten aan mijn groepje.</p>
+      <p><strong>Privémail:</strong> <a href="mailto:daanabbink@icloud.com">daanabbink@icloud.com</a><br>
+      <strong>Schoolmail:</strong> <a href="mailto:drb.abbink@student.alfa-college.nl">drb.abbink@student.alfa-college.nl</a><br>
+      <strong>GitHub:</strong> <a href="https://github.com/dabbink" target="_blank" rel="noopener">github.com/dabbink</a></p>
+    </div>
+    <form id="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label>Naam <input type="text" name="naam" required autocomplete="name"></label>
+      <label>E-mailadres <input type="email" name="email" required autocomplete="email"></label>
+      <label>Bericht <textarea name="bericht" required></textarea></label>
+      <button class="btn primary" type="submit">Bericht versturen</button>
+      <p id="status" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">© 
+    <span id="jaar"></span> Daan Abbink
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

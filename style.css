@@ -1,0 +1,64 @@
+:root{--bg:#eef2f7;--surface:#fff;--ink:#14213d;--muted:#5b6a80;--accent:#2f5bea;--accent-ink:#fff;--line:#d5dce8;--bar:#dfe6f2}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1626;--surface:#172136;--ink:#e9eef8;--muted:#9aa8bf;--accent:#6c8cff;--accent-ink:#0f1626;--line:#27344d;--bar:#243049}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:space-between;align-items:center;height:62px;gap:16px}
+.logo{font:800 1.15rem "Bricolage Grotesque",sans-serif;color:var(--ink);text-decoration:none}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap;justify-content:flex-end}
+nav ul a{color:var(--muted);text-decoration:none;font-weight:500;font-size:.95rem}
+nav ul a:hover{color:var(--accent)}
+section{padding:84px 0}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 36px}
+/* Home */
+#home{padding:96px 0 84px}
+#home h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.02em;max-width:22ch}
+#home h1 span{color:var(--accent)}
+.intro-sub{font-size:1.05rem;color:var(--accent);font-weight:500;margin:12px 0 0}
+#home p{max-width:56ch;font-size:1.2rem;color:var(--muted);margin:20px 0 32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font:700 1rem "DM Sans",sans-serif;text-decoration:none;border:2px solid var(--accent);cursor:pointer}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:hover{filter:brightness(1.1)}
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px 48px}
+.skill{margin-bottom:6px}
+.skill-top{display:flex;justify-content:space-between;font-weight:500;margin-bottom:6px}
+.skill-top small{color:var(--muted);font-size:.9rem}
+.track{height:12px;background:var(--bar);border-radius:6px;overflow:hidden}
+.fill{height:100%;width:0;background:var(--accent);border-radius:6px;transition:width 1s ease}
+.skills-group h3{font-size:1.2rem;margin-bottom:14px}
+/* Soft skills */
+.soft{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.soft div{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:6px;padding:20px}
+.soft h3{font-size:1.15rem;margin-bottom:6px}
+.soft p{margin:0;color:var(--muted);font-size:.98rem}
+/* Projecten */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.shot{aspect-ratio:16/10;background:var(--bar);display:grid;place-items:center;color:var(--muted);font-size:.95rem;text-align:center;padding:12px}
+.shot img{width:100%;height:100%;object-fit:contain;display:block}
+.project .body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.project h3{font-size:1.35rem}
+.project p{margin:0;color:var(--muted);font-size:.98rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:2px 12px;font-size:.85rem;color:var(--ink)}
+.role{color:var(--ink)!important}
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:48px}
+@media(max-width:760px){.contact{grid-template-columns:1fr}}
+form{display:grid;gap:16px}
+label{font-weight:500;display:grid;gap:6px}
+input,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:8px;padding:12px 14px;width:100%}
+input:focus,textarea:focus{border-color:var(--accent)}
+textarea{min-height:140px;resize:vertical}
+#status{min-height:1.5em;font-weight:500}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.95rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fill{transition:none}}
