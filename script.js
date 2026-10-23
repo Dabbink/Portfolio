@@ -8,7 +8,6 @@ const skills = {
   ],
   "Tools & overig": [
     ["Git & GitHub", 75, "Gevorderd"],
-    ["Figma", 65, "Gemiddeld"],
     ["Responsive design", 80, "Gevorderd"],
     ["Godot", 60, "Gemiddeld"]
   ]
