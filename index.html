@@ -150,10 +150,19 @@
       <strong>Schoolmail:</strong> <a href="mailto:drb.abbink@student.alfa-college.nl">drb.abbink@student.alfa-college.nl</a><br>
       <strong>GitHub:</strong> <a href="https://github.com/dabbink" target="_blank" rel="noopener">github.com/dabbink</a></p>
     </div>
-    <form id="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <label>Naam <input type="text" name="naam" required autocomplete="name"></label>
-      <label>E-mailadres <input type="email" name="email" required autocomplete="email"></label>
-      <label>Bericht <textarea name="bericht" required></textarea></label>
+    <form id="form">
+      <label>Naam
+        <input type="text" name="naam" required autocomplete="name">
+      </label>
+
+      <label>E-mailadres
+        <input type="email" name="email" required autocomplete="email">
+      </label>
+
+      <label>Bericht
+        <textarea name="bericht" required></textarea>
+      </label>
+
       <button class="btn primary" type="submit">Bericht versturen</button>
       <p id="status" role="status"></p>
     </form>

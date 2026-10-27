@@ -33,13 +33,22 @@ io.observe(box);
 document.getElementById("jaar").textContent = new Date().getFullYear();
 
 // Contactformulier via Formspree
-const form = document.getElementById("form"), status = document.getElementById("status");
-form.addEventListener("submit", async e => {
+const form = document.getElementById("form");
+const status = document.getElementById("status");
+
+form.addEventListener("submit", e => {
   e.preventDefault();
-  status.textContent = "Bezig met versturen...";
-  try {
-    const r = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
-    if (r.ok) { status.textContent = "Bericht verstuurd. Ik reageer zo snel mogelijk."; form.reset(); }
-    else throw new Error();
-  } catch { status.textContent = "Versturen mislukt. Probeer het later opnieuw of mail me direct."; }
+
+  const data = new FormData(form);
+  const onderwerp = "Contact via portfolio";
+  const bericht =
+    `Naam: ${data.get("")}\n` +
+    `E-mailadres: ${data.get("email")}\n\n` +
+    `Bericht:\n${data.get("bericht")}`;
+
+  status.textContent =
+    "Je e-mailprogramma wordt geopend. Verstuur het bericht daar.";
+
+  window.location.href =
+  `mailto:daanabbink@icloud.com?subject=${encodeURIComponent(onderwerp)}&body=${encodeURIComponent(bericht)}`;
 });
