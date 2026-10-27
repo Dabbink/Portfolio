@@ -42,7 +42,7 @@ form.addEventListener("submit", e => {
   const data = new FormData(form);
   const onderwerp = "Contact via portfolio";
   const bericht =
-    `Naam: ${data.get("")}\n` +
+    `Naam: ${data.get("naam")}\n` +
     `E-mailadres: ${data.get("email")}\n\n` +
     `Bericht:\n${data.get("bericht")}`;
 
