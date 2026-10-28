@@ -52,3 +52,27 @@ form.addEventListener("submit", e => {
   window.location.href =
   `mailto:daanabbink@icloud.com?subject=${encodeURIComponent(onderwerp)}&body=${encodeURIComponent(bericht)}`;
 });
+
+const visualViewport = window.visualViewport;
+
+function updateFooterPosition() {
+  const bottomInset = visualViewport
+    ? Math.max(
+        0,
+        window.innerHeight - visualViewport.height - visualViewport.offsetTop
+      )
+    : 0;
+
+  document.documentElement.style.setProperty(
+    "--browser-bottom-inset",
+    `${bottomInset}px`
+  );
+}
+
+updateFooterPosition();
+window.addEventListener("resize", updateFooterPosition);
+
+if (visualViewport) {
+  visualViewport.addEventListener("resize", updateFooterPosition);
+  visualViewport.addEventListener("scroll", updateFooterPosition);
+}
