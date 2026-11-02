@@ -29,7 +29,7 @@ h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:12px}
 .btn:hover{filter:brightness(1.1)}
 /* Skills */
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px 48px}
-.skill{margin-bottom:6px}
+.skill{margin-bottom:6px;background:var(--surface);padding:16px;border:1px solid var(--line);border-radius:8px}
 .skill-top{display:flex;justify-content:space-between;font-weight:500;margin-bottom:6px}
 .skill-top small{color:var(--muted);font-size:.9rem}
 .track{height:12px;background:var(--bar);border-radius:6px;overflow:hidden}
