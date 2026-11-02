@@ -50,7 +50,7 @@ form.addEventListener("submit", e => {
     "Je e-mailprogramma wordt geopend. Verstuur het bericht daar.";
 
   window.location.href =
-  `mailto:daanabbink@icloud.com?subject=${encodeURIComponent(onderwerp)}&body=${encodeURIComponent(bericht)}`;
+  `mailto:drb.abbink@student.alfa-college.nl?subject=${encodeURIComponent(onderwerp)}&body=${encodeURIComponent(bericht)}`;
 });
 
 const visualViewport = window.visualViewport;
