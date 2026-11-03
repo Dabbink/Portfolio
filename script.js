@@ -32,6 +32,29 @@ io.observe(box);
 
 document.getElementById("jaar").textContent = new Date().getFullYear();
 
+const visualViewport = window.visualViewport;
+
+function updateFooterPosition() {
+  const viewportOffset = visualViewport
+    ? Math.max(0, visualViewport.offsetTop)
+    : 0;
+  const bottomInset = visualViewport
+    ? Math.max(0, window.innerHeight - visualViewport.height - viewportOffset)
+    : 0;
+
+  document.documentElement.style.setProperty(
+    "--browser-bottom-inset",
+    `${bottomInset}px`
+  );
+}
+
+updateFooterPosition();
+window.addEventListener("resize", updateFooterPosition);
+if (visualViewport) {
+  visualViewport.addEventListener("resize", updateFooterPosition);
+  visualViewport.addEventListener("scroll", updateFooterPosition);
+}
+
 // Contactformulier via Formspree
 const form = document.getElementById("form");
 const status = document.getElementById("status");
@@ -52,4 +75,3 @@ form.addEventListener("submit", e => {
   window.location.href =
   `mailto:drb.abbink@student.alfa-college.nl?subject=${encodeURIComponent(onderwerp)}&body=${encodeURIComponent(bericht)}`;
 });
-
